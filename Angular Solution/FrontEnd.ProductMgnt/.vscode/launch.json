@@ -4,6 +4,7 @@
     // For further information visit https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "Launch Program",
             "type": "node2",
@@ -20,6 +21,15 @@
             "port": 9229,
             "outFiles": [],
             "sourceMaps": true
+        },
+        {
+            "name": "Launch localhost with sourcemaps",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000/index",
+            "sourceMaps": true,
+            "webRoot": "${workspaceRoot}",
+            "runtimeExecutable": ""
         }
     ]
 }
