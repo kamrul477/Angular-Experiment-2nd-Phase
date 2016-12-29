@@ -15,6 +15,22 @@ namespace WebApi.Controllers
         // GET: api/Product
         public IEnumerable<Product> Get()
         {
+
+            return _context.Products.ToList();
+        }
+
+        // GET: api/Product/5
+        public Product Get(Guid id)
+        {
+            if (!id.Equals(null))
+                return _context.Products.Find(id);
+            else
+                return null;
+        }
+
+        // POST: api/Product
+        public void Post([FromBody]string value)
+        {
             var product = new Product
             {
                 Id = Guid.NewGuid(),
@@ -29,18 +45,6 @@ namespace WebApi.Controllers
             };
             _context.Products.Add(product);
             _context.SaveChanges();
-            return _context.Products.ToList();
-        }
-
-        // GET: api/Product/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/Product
-        public void Post([FromBody]string value)
-        {
         }
 
         // PUT: api/Product/5
