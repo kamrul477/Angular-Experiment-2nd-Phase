@@ -2,14 +2,15 @@
 
 export interface IProduct {
 
-        productId: number;
+        id: number;
         productName: string;
-        productCode: number;
-        releaseDate: Date;
-        description: string;
-        price: number;
-        starRating: number;
-        imageUrl: string;
+        productModel: number;
+        countryOfOrigin: string;
+        manufactureDate: Date;
+        productVendor: string;
+        productDescription: string;
+        productBasePrice: number;
+        productImageUrl: string;
         //"imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
 
 }

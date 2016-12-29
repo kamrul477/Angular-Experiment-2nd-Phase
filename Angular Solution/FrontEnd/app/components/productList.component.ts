@@ -8,6 +8,8 @@ import {ProductService} from '../services/product.service';
 })
 
 export class ProductListComponent implements OnInit {
+    
+   
     pageTitle: string = 'Product List';
     imageWidth: number = 50;
     imageMargin: number = 2;
@@ -17,11 +19,7 @@ export class ProductListComponent implements OnInit {
     products: IProduct[]; 
     pageName: string = "kamrul";
 
-    private _productService: ProductService;
-
-    constractor(productService: ProductService) {
-       this._productService = productService;
-    }
+    constructor(protected _productService: ProductService) {}    
 
     ngOnInit(): void {
         this._productService.getProducts()
