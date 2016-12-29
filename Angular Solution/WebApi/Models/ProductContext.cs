@@ -8,7 +8,7 @@ namespace WebApi
 {
     public class ProductContext : DbContext
     {
-        public ProductContext():base("ProductDatabase")
+        public ProductContext()/*base("ProductDatabase")*/
         {
 
         }

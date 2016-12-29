@@ -25,11 +25,11 @@
                                    {{showImage?'Hide':'Show'}} Image
                                 </button>
                             </th>
-                            <th>Product</th>
-                            <th>Code</th>
-                            <th>Available</th>
-                            <th>Price</th>
-                            <th>5 Star Rating</th>
+                            <th>Product Name</th>
+                            <th>Country Of Origin</th>
+                            <th>Product Base Price</th>
+                            <th>Manufacture Date</th>
+                            <th>product Description</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,10 +42,10 @@
                                      [style.margin.px]="imageMargin" />
                             </td>
                             <td>{{product.productName}}</td>
-                            <td>{{product.CountryOfOrigin}}</td>
-                            <td>{{product.ProductBasePrice}}</td>
-                            <td>{{product.ManufactureDate}}</td>
-                            <td>{{product.ProductDescription}}</td>
+                            <td>{{product.pountryOfOrigin}}</td>
+                            <td>{{product.productBasePrice}}</td>
+                            <td>{{product.manufactureDate}}</td>
+                            <td>{{product.productDescription}}</td>
                         </tr>
                     </tbody>
                 </table>

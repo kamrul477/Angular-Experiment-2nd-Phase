@@ -15,6 +15,20 @@ namespace WebApi.Controllers
         // GET: api/Product
         public IEnumerable<Product> Get()
         {
+            var product = new Product
+            {
+                Id = Guid.NewGuid(),
+                CountryOfOrigin = "Bangladesh",
+                ManufactureDate = DateTime.Now,
+                ProductBasePrice = 300,
+                ProductDescription = "example",
+                ProductImageUrl = "dfdfd",
+                ProductModel = "inital",
+                ProductName = "Hammer",
+                ProductVendor = "Unknown"
+            };
+            _context.Products.Add(product);
+            _context.SaveChanges();
             return _context.Products.ToList();
         }
 
