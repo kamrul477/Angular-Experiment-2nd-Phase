@@ -4,7 +4,7 @@ import {ProductService} from '../services/product.service';
 
 @Component({
     selector: 'pm-products',
-    templateUrl: './components/product-list.component.html'
+    templateUrl: './app/components/productList.component.html'
 })
 
 export class ProductListComponent implements OnInit {
@@ -15,12 +15,14 @@ export class ProductListComponent implements OnInit {
     listFilter: string = 'cart';
     errorMessage :string;
     products: IProduct[]; 
-    pageName:string = "kamrul";
+    pageName: string = "kamrul";
+
     private _productService: ProductService;
 
     constractor(productService: ProductService) {
        this._productService = productService;
     }
+
     ngOnInit(): void {
         this._productService.getProducts()
             .subscribe(products => this.products = products,
