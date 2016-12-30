@@ -37,7 +37,8 @@ import {AboutUsComponent} from './components/about-us.component';
         ProductListComponent,
         ProductDetailsComponent,
         WelcomeComponent,
-        PageNotFoundComponent
+        PageNotFoundComponent,
+        AboutUsComponent
     ],
     bootstrap: [AppComponent]
 })
