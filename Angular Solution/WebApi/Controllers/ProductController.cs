@@ -15,7 +15,6 @@ namespace WebApi.Controllers
         // GET: api/Product
         public IEnumerable<Product> Get()
         {
-
             return _context.Products.ToList();
         }
 

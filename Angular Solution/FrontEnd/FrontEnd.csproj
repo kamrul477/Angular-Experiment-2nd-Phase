@@ -68,6 +68,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\components\product-details.component.html" />
     <Content Include="packages.config" />
     <Content Include=".editorconfig" />
     <Content Include=".travis.yml" />
@@ -124,6 +125,7 @@
     <TypeScriptCompile Include="app\app.component.spec.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\components\product-details.component.ts" />
     <TypeScriptCompile Include="app\components\productList.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\models\product.model.ts" />
