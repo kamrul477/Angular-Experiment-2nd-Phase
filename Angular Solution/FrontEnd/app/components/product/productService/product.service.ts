@@ -1,7 +1,7 @@
 
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { IProduct } from '../models/product.model';
+import { IProduct } from '../../../models/product.model';
 import {Injectable} from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
@@ -19,6 +19,11 @@ export class ProductService {
             .map((response: Response) => <IProduct[]>response.json())
             .do(data => console.log('All' + JSON.stringify(data)))
             .catch(this.handleError);
+    }
+
+    getProduct(id:number):Observable<IProduct>{
+       let productUrl = 'http://localhost:52086/api/Product/:id';
+            return this._http.get(productUrl).map((response:Response)=><IProduct>response.json());
     }
     private handleError(error: Response) {
         console.error(error);

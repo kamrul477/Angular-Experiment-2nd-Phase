@@ -33,7 +33,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor='let product of products'>
+                        <tr *ngFor='let product of products | async'>
                             <td>
                                 <img *ngIf ='showImage'
                                      [src]='product.imageUrl'
@@ -41,7 +41,9 @@
                                      [style.width.px]='imageWidth'
                                      [style.margin.px]="imageMargin" />
                             </td>
-                            <td><a [routerLink]="['/product', product.id]">{{product.productName}}</a></td>
+                           <!--<td><a [routerLink]="['/product', product.id]">{{product.productName}}</a></td> --> 
+                            <td><li (click)="onSelect(product)">
+                                <span class="badge">{{product.id }}</span> {{ product.productName }}</li> </td>
                             <td>{{product.countryOfOrigin}}</td>
                             <td>{{product.productBasePrice}}</td>
                             <td>{{product.manufactureDate}}</td>
