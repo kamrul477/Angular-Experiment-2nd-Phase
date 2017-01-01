@@ -71,8 +71,10 @@
     <Content Include="app\app.component.html" />
     <Content Include="app\components\about-us.component.html" />
     <Content Include="app\components\page-not-found.component.html" />
-    <Content Include="app\components\product\product-details.component.html" />
-    <Content Include="app\components\product\product-edit.component.html" />
+    <Content Include="app\components\product\productsView\product-details.component.html" />
+    <Content Include="app\components\product\productsView\product-edit.component.html" />
+    <Content Include="app\components\product\productsView\productList.component.html" />
+    <Content Include="app\customModules\app-routing.module.js" />
     <Content Include="packages.config" />
     <Content Include=".editorconfig" />
     <Content Include=".travis.yml" />
@@ -83,6 +85,7 @@
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="app\customModules\app-routing.module.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -92,7 +95,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="app\components\product\productList.component.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -124,19 +126,25 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="app\services\" />
+  </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.spec.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\components\about-us.component.ts" />
     <TypeScriptCompile Include="app\components\page-not-found.component.ts" />
-    <TypeScriptCompile Include="app\components\product\product-details.component.ts" />
-    <TypeScriptCompile Include="app\components\product\productList.component.ts" />
-    <TypeScriptCompile Include="app\components\product\product-edit.component.ts" />
+    <TypeScriptCompile Include="app\components\product\productComponents\product-details.component.ts" />
+    <TypeScriptCompile Include="app\components\product\productComponents\product-edit.component.ts" />
+    <TypeScriptCompile Include="app\components\product\productComponents\productList.component.ts" />
+    <TypeScriptCompile Include="app\components\product\productService\product.service.ts" />
+    <TypeScriptCompile Include="app\components\product\productsModules\product-routing.module.ts" />
+    <TypeScriptCompile Include="app\components\product\productsModules\product.module.ts" />
+    <TypeScriptCompile Include="app\components\welcome.component.ts" />
+    <TypeScriptCompile Include="app\customModules\app-routing.module.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\models\product.model.ts" />
-    <TypeScriptCompile Include="app\services\product.service.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
