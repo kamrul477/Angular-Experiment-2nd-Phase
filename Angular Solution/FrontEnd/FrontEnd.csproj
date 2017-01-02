@@ -74,7 +74,6 @@
     <Content Include="app\components\product\productsView\product-details.component.html" />
     <Content Include="app\components\product\productsView\product-edit.component.html" />
     <Content Include="app\components\product\productsView\productList.component.html" />
-    <Content Include="app\customModules\app-routing.module.js" />
     <Content Include="packages.config" />
     <Content Include=".editorconfig" />
     <Content Include=".travis.yml" />
@@ -85,7 +84,6 @@
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
-    <Content Include="app\customModules\app-routing.module.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

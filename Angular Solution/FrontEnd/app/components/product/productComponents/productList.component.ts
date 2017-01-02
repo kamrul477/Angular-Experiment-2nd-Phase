@@ -1,13 +1,12 @@
+
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from './../../../models/product.model';
 import { ProductService } from '../../product/productService/product.service';
 import { Router } from '@angular/router';
 
-
-
 @Component({
     //selector: 'pm-products',
-    templateUrl: './app/components/productList.component.html'
+    templateUrl: './../productsView/productList.component.html'
 })
 
 export class ProductListComponent implements OnInit {
