@@ -1,4 +1,5 @@
-﻿import { Component, OnInit } from "@angular/core";
+﻿
+import { Component, OnInit } from "@angular/core";
 import { IProduct } from "../../../models/product.model";
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
@@ -18,7 +19,8 @@ export class ProductDetailsComponent implements OnInit {
     constructor(private _route: ActivatedRoute, private _router: Router, private _service: ProductService) { }
 
     ngOnInit(): void {
-        //let id = +this._route.snapshot.params['id'];
+        //(+) converts string 'id' to a number
+        let id = +this._route.snapshot.params['id'];
         //this.pageTitle += `: ${id}`;
         this._route.params
             // (+) converts string 'id' to a number

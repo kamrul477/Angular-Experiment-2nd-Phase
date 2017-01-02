@@ -15,6 +15,8 @@ import { PageNotFoundComponent } from './components/page-not-found.component';
 import { AboutUsComponent } from './components/about-us.component';
 import {AppRoutingModule} from './customModules/app-routing.module';
 import { WelcomeComponent } from './components/welcome.component';
+import { ProductModule } from './components/product/productsModules/product.module';
+
 
 @NgModule({
     imports:
@@ -22,7 +24,8 @@ import { WelcomeComponent } from './components/welcome.component';
         BrowserModule,
         FormsModule,
         HttpModule,
-        AppRoutingModule    
+        AppRoutingModule,
+        ProductModule  
     ],
     declarations:
     [

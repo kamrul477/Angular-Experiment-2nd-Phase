@@ -6,7 +6,7 @@ import { WelcomeComponent } from '../components/welcome.component';
 //import { ProductListComponent } from '../components/product/productComponents/productList.component';
 import { PageNotFoundComponent } from '../components/page-not-found.component';
 import { AboutUsComponent } from '../components/about-us.component';
-import {ProductModule} from './../components/product/productsModules/product.module'
+
 
 const appRoutes: Routes = [
    // { path: 'products', component: ProductListComponent },
@@ -19,7 +19,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(appRoutes),ProductModule
+    RouterModule.forRoot(appRoutes),
   ],
   declarations:[
      
