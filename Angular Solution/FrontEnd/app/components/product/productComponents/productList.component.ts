@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 
 @Component({
     //selector: 'pm-products',
-    templateUrl: './../productsView/productList.component.html'
+    templateUrl: 'app/components/product/productsView/productList.component.html'
 })
 
 export class ProductListComponent implements OnInit {

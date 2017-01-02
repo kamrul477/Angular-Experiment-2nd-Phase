@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'pm-app',
-  templateUrl:'./app/app.component.html', 
+  templateUrl:'app/app.component.html', 
   providers: []
 })
 export class AppComponent {

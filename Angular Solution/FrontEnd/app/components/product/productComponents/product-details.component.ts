@@ -7,7 +7,7 @@ import { ProductService } from './../productService/product.service'
 
 
 @Component({
-    templateUrl: "./../productsView/product-details.component.html"
+    templateUrl: "app/components/product/productsView/product-details.component.html"
 })
 
 
