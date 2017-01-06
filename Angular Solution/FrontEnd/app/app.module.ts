@@ -6,15 +6,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { ProductDetailsComponent } from './components/product-details.component';
-import { WelcomeComponent } from './components/welcome.component';
-import { ProductListComponent } from './components/productList.component';
+
 import { PageNotFoundComponent } from './components/page-not-found.component';
-import {AboutUsComponent} from './components/about-us.component';
+import { AboutUsComponent } from './components/about-us.component';
+import {AppRoutingModule} from './customModules/app-routing.module';
+import { WelcomeComponent } from './components/welcome.component';
+import { ProductModule } from './components/product/productsModules/product.module';
+
 
 @NgModule({
     imports:
@@ -22,20 +24,12 @@ import {AboutUsComponent} from './components/about-us.component';
         BrowserModule,
         FormsModule,
         HttpModule,
-        RouterModule.forRoot([
-            { path: 'products', component: ProductListComponent },
-            { path: 'product/:id', component: ProductDetailsComponent },
-            { path: 'aboutus', component: AboutUsComponent },
-            { path: 'welcome', component: WelcomeComponent },
-            { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-            { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
-        ])
+        AppRoutingModule,
+        ProductModule  
     ],
     declarations:
     [
-        AppComponent,
-        ProductListComponent,
-        ProductDetailsComponent,
+        AppComponent,     
         WelcomeComponent,
         PageNotFoundComponent,
         AboutUsComponent
